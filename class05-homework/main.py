@@ -64,6 +64,8 @@ def draw():
             head_y = head_y - 1
         elif (p5.key == 's'):  
             head_y = head_y + 1
+            
+    # reset the game
         elif (p5.key == 'r'):  
             robot_x = 0
             robot_y = 0
