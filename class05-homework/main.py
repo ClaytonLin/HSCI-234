@@ -181,16 +181,18 @@ def body_pattern_2(x,y,radius1,radius2):
 def rotate_rec_1():
     global angle 
     p5.push()
+    p5.fill(220)
     p5.translate(robot_x - 20, robot_y + 30)
     p5.rotate(angle)  # rotate by angle
     p5.rect(0, 9, 10, 20)
-    angle = angle + 0.05  # increment angle
+    angle = angle + 0.05
     p5.pop()
 
 # draw rotate_rec2
 def rotate_rec_2():
     global angle_2 
     p5.push()
+    p5.fill(220)
     p5.translate(robot_x - 20, robot_y + 30)
     p5.rotate(angle_2)  # rotate by angle
     p5.rect(0, 9, 10, 20)
@@ -201,6 +203,7 @@ def rotate_rec_2():
 def rotate_rec_3():
     global angle_2 
     p5.push()
+    p5.fill(220)
     p5.translate(robot_x - 20, robot_y + 30)
     p5.rotate(angle_2)  # rotate by angle
     p5.rect(0, 9, 10, 20)
