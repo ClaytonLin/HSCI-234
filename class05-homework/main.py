@@ -13,6 +13,7 @@ def setup():
     p5.createCanvas(300, 300)   
     p5.rectMode(p5.CENTER)  # set rectangle drawing mode to CENTER
 
+# draw
 def draw():
     global robot_x
     global robot_y
@@ -43,40 +44,45 @@ def draw():
     body_pattern(robot_x + -20,robot_y + 30,60,60)
     p5.pop()
 
+    # control the robot
     if (p5.keyIsPressed == True):
-        if (p5.keyCode == p5.LEFT_ARROW):  # left arrow
+        if (p5.keyCode == p5.LEFT_ARROW):
             robot_x = robot_x - 1
-        elif (p5.keyCode == p5.RIGHT_ARROW):  # right arrow
+        elif (p5.keyCode == p5.RIGHT_ARROW): 
             robot_x = robot_x + 1
-        elif (p5.keyCode == p5.UP_ARROW):  # up arrow
+        elif (p5.keyCode == p5.UP_ARROW):
             robot_y = robot_y - 1
-        elif (p5.keyCode == p5.DOWN_ARROW):  # down arrow
+        elif (p5.keyCode == p5.DOWN_ARROW):  
             robot_y = robot_y + 1
-        elif (p5.key == 'a'):  # down arrow
+            
+    # control the head of the robot
+        elif (p5.key == 'a'):  
             head_x = head_x - 1
-        elif (p5.key == 'd'):  # down arrow
+        elif (p5.key == 'd'):  
             head_x = head_x + 1
-        elif (p5.key == 'w'):  # down arrow
+        elif (p5.key == 'w'):  
             head_y = head_y - 1
-        elif (p5.key == 's'):  # down arrow
+        elif (p5.key == 's'):  
             head_y = head_y + 1
-        elif (p5.key == 'r'):  # down arrow
+        elif (p5.key == 'r'):  
             robot_x = 0
             robot_y = 0
             head_x = 0
             head_y = 0
             explode_x = 0
             explode_y = 0
-
+    # stop when key is not pressed
         if (p5.keyIsPressed == False):
             p5.pop()
-        
+
+# draw notice
 def draw_notice():
     p5.fill(255,255,0)
     p5.strokeWeight(0)
     p5.rect(60,-120,10,50)
     p5.rect(60,-60,10,10)
-    
+
+# draw head
 def draw_head():
     global explode_x
     global explode_y
@@ -94,6 +100,7 @@ def draw_head():
     p5.ellipse(robot_x + head_x, robot_y - 50 + head_y, explode_x + 100, explode_y + 100)
     p5.strokeWeight(0)
 
+# draw body
 def draw_body():
     p5.fill(255)
     p5.strokeWeight(0)
@@ -104,6 +111,7 @@ def draw_body():
             p5.fill(150)
     p5.ellipse(robot_x, robot_y + 50, 150, 150)
 
+# draw eye
 def draw_eye():
     p5.fill(90)
     if (p5.mouseIsPressed == True):
@@ -113,6 +121,7 @@ def draw_eye():
             p5.fill(130)
     p5.ellipse(robot_x + head_x, robot_y - 60 + head_y, 30, 30)
 
+# draw eye2
 def draw_eye_2():
     p5.fill(50)
     if (p5.mouseIsPressed == True):
@@ -122,10 +131,12 @@ def draw_eye_2():
             p5.fill(170)
     p5.ellipse(robot_x + head_x, robot_y - 60 + head_y, 20, 20)
 
+# draw eye3
 def draw_eye_3():
     p5.fill(255,87,51)
     p5.ellipse(robot_x + head_x, robot_y - 60 + head_y, 10, 10)
 
+# draw body pattern
 def body_pattern(x, y,radius1,radius2):
     p5.fill(230)
     p5.strokeWeight(0)
@@ -146,6 +157,7 @@ def body_pattern(x, y,radius1,radius2):
     rotate_rec_2()
     rotate_rec_3()
 
+# draw body pattern2
 def body_pattern_2(x,y,radius1,radius2):
     p5.fill(230)
     p5.strokeWeight(0)
@@ -163,7 +175,7 @@ def body_pattern_2(x,y,radius1,radius2):
             p5.fill(150)
     p5.ellipse(x, y, radius1/1.5, radius2/1.5)
 
-
+# draw rotate_rec1
 def rotate_rec_1():
     global angle 
     p5.push()
@@ -173,6 +185,7 @@ def rotate_rec_1():
     angle = angle + 0.05  # increment angle
     p5.pop()
 
+# draw rotate_rec2
 def rotate_rec_2():
     global angle_2 
     p5.push()
@@ -182,6 +195,7 @@ def rotate_rec_2():
     angle_2 = angle + 90  # increment angle
     p5.pop()
 
+# draw rotate_rec3
 def rotate_rec_3():
     global angle_2 
     p5.push()
