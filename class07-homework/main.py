@@ -14,9 +14,13 @@ def draw():
     p5.background(253,242,112)   
     p5.fill(0)
     p5.text(str(p5.mouseX) + ", " + str(p5.mouseY), 10, 15)
+    
+    # change the program state
     if (p5.millis() > program_timer + 2000):
         program_state = 'state2'
         program_timer = p5.millis()
+        
+    # draw compositions
     draw_hole(140,220)
     draw_hole(70,120)
     draw_hole(180,20)
@@ -34,6 +38,7 @@ def draw():
     draw_shape2(220,120)
     draw_shape3(220,120)
 
+# key interaction
 def keyPressed(event):
     global program_state, program_timer
     print('keyPressed.. ' + str(p5.key))
@@ -45,10 +50,11 @@ def keyPressed(event):
         program_state = 'state3'
     program_timer = p5.millis()
 
-    
+
 def keyReleased(event):
     print('keyReleased.. ' + str(p5.key))
 
+# mouse interaction
 def mousePressed(event):
     global program_state, program_timer
     print('mousePressed..')
@@ -58,6 +64,7 @@ def mousePressed(event):
         program_state = 'state3'
         program_timer = p5.millis()
 
+# stop mouse interaction
 def mouseReleased(event):
     global program_state, program_timer
     print('mouseReleased..')
