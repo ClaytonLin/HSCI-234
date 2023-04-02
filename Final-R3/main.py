@@ -1,3 +1,6 @@
+#move your hand to grab the cube to the target
+#press tab to pause the game
+
 import js
 from pyodide.ffi import create_proxy
 p5 = js.window
@@ -94,9 +97,6 @@ def setup():
         "scoreThreshold": 0.75,
         "iouThreshold": 0.3,
     }
-    print('move your hand to grab the cube to the target')
-    print('press tab to pause the game')
-    print('press tab to pause the game')
     print('ml5 version:', ml5.version)
     #handpose = ml5.handpose(video, options, model_ready)
     model_ready_proxy = create_proxy(model_ready)
@@ -191,7 +191,7 @@ def draw_landmarks(index_array, hue):
     for detection in detections:
         for j in range(index_array[0], index_array[1]):
             x, y, z = detection.landmarks[j]
-            p5.stroke(hue, 40, 255)
+            p5.stroke(hue, 50, 255)
             p5.point(x, y)
 
 def draw_lines(index):
