@@ -174,7 +174,6 @@ def draw():
   global program_state, font1, start, guide, pinocchio, point, bubble, short, short_speed, long_speed, statement1, statement2, statement3, point_x
   p5.background('#64C3EF') 
   print('program_state =' + program_state)
-  p5.textFont(font1)
   
   if(program_state == 'START'):
     start.draw()
