@@ -164,7 +164,6 @@ he = HE()
 be = BE()
       
 def setup():
-  global font1
   p5.createCanvas(500, 500) 
   p5.rectMode(p5.CENTER)
   # p5.imageMode(p5.CENTER)
