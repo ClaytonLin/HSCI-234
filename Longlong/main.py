@@ -1,7 +1,6 @@
 import js
 p5 = js.window
 program_state = 'START'
-font1  = p5.loadFont('Chalkboard.ttf')
 short_speed = 8
 long_speed = 1
 point_x = 0
@@ -13,7 +12,7 @@ def Winpoint():
   
 class Start():  
   def __init__(self):
-    self.img = p5.loadImage('data/start.png')
+    self.img = p5.loadImage('start.png')
     self.x = 215
     self.y = 160
   
@@ -25,7 +24,7 @@ class Start():
 
 class Guide():  
   def __init__(self):
-    self.img = p5.loadImage('data/guide.png')
+    self.img = p5.loadImage('guide.png')
     self.x = 225
     self.y = 190
 
@@ -37,7 +36,7 @@ class Guide():
 
 class Pinocchio():  
   def __init__(self):
-    self.img = p5.loadImage('data/pinocchio.png')
+    self.img = p5.loadImage('pinocchio.png')
     self.x = 120
     self.y = 250
     
@@ -49,7 +48,7 @@ class Pinocchio():
 
 class Point():  
   def __init__(self):
-    self.img = p5.loadImage('data/points.png')
+    self.img = p5.loadImage('points.png')
     self.x = 250
     self.y = 17
     
@@ -62,7 +61,7 @@ class Point():
 
 class Bubble():  
   def __init__(self):
-    self.img = p5.loadImage('data/bubble.png')
+    self.img = p5.loadImage('bubble.png')
     self.x = 215
     self.y = 130
     
@@ -74,7 +73,7 @@ class Bubble():
 
 class Short():
   def __init__(self):
-    self.img = p5.loadImage('data/short.png')
+    self.img = p5.loadImage('short.png')
     self.x = 130
     self.y = 275
 
@@ -86,7 +85,7 @@ class Short():
     
 class Long():
   def __init__(self):
-    self.img = p5.loadImage('data/long.png')
+    self.img = p5.loadImage('long.png')
     self.x = 130
     self.y = 275
 
@@ -129,7 +128,7 @@ class Statement3():
 
 class HE():  
   def __init__(self):
-    self.img = p5.loadImage('data/win.png')
+    self.img = p5.loadImage('win.png')
     self.x = 215
     self.y = 160
 
@@ -141,7 +140,7 @@ class HE():
 
 class BE():  
   def __init__(self):
-    self.img = p5.loadImage('data/lose.png')
+    self.img = p5.loadImage('lose.png')
     self.x = 215
     self.y = 160
 
