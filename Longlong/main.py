@@ -249,18 +249,7 @@ def draw():
 #     short.draw()
     
 # longnose
-    if(program_state == 'PLAY2'):
-        long.draw()
-        short.draw()
-        long.x += long_speed 
-        short.x += short_speed 
-      #print(short.x)
-      if (long.x > p5.width - 250) \
-      or (long.x < 20):
-          long_speed *= -1  # change direction
-      if (short.x > p5.width - 5) \
-      or (short.x < 5):
-          short_speed *= -1  # change direction
+  # change direction
     #short.draw()
     
     # #change to play 3
