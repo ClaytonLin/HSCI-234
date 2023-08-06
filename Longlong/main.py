@@ -168,7 +168,6 @@ def setup():
   p5.createCanvas(500, 500) 
   p5.rectMode(p5.CENTER)
   # p5.imageMode(p5.CENTER)
-  p5.textFont(font1)
   p5.textSize(24)
   
 def draw():
